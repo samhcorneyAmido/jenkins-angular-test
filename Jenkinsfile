@@ -30,7 +30,7 @@ node {
 
     stage('Test') {
       withEnv(["CHROME_BIN=/usr/bin/chromium"]) {
-        sh 'npm run test --single-run --no-progress --browser=ChromeHeadlessNoSandbox'
+        sh 'npm run test -- --single-run --no-progress --browser=ChromeHeadlessNoSandbox'
       }
     }
 
