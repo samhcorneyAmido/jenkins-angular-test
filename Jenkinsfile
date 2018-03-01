@@ -25,16 +25,11 @@ node {
     }
 
     stage('NPM Install') {
-        withEnv(["NPM_CONFIG_LOGLEVEL=warn"]) {
-            sh 'npm install'
-        }
+      sh 'npm install'
     }
 
     stage('Test') {
-        withEnv(["CHROME_BIN=/usr/bin/chromium"]) {
-          sh 'ng test --progress=false --watch false'
-        }
-        junit '**/test-results.xml'
+      ng test --single-run --no-progress --browser=ChromeNoSandbox
     }
 
     stage('Lint') {
