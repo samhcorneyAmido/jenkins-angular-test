@@ -29,16 +29,16 @@ node {
     }
 
     stage('Test') {
-        sh 'ng test --single-run --no-progress --browser=ChromeNoSandbox'
+        sh 'npm run test --single-run --no-progress --browser=ChromeNoSandbox'
     }
 
     stage('Lint') {
-        sh 'ng lint'
+        sh 'npm run lint'
     }
 
     stage('Build') {
         milestone()
-        sh 'ng build --prod --aot --sm --progress=false'
+        sh 'npm run build --prod --aot --sm --progress=false'
     }
 
     stage('Archive') {
