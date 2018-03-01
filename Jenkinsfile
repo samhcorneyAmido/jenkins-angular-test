@@ -29,7 +29,7 @@ node {
     }
 
     stage('Test') {
-      ng test --single-run --no-progress --browser=ChromeNoSandbox
+        sh 'ng test --single-run --no-progress --browser=ChromeNoSandbox'
     }
 
     stage('Lint') {
