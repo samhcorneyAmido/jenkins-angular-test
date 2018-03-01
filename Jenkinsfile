@@ -31,7 +31,7 @@ node {
     }
 
     stage('Test') {
-        withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
+        withEnv(["CHROME_BIN=/usr/bin/chromium"]) {
           sh 'ng test --single-run --code-coverage --browsers ChromeHeadless'
         }
         junit '**/test-results.xml'
