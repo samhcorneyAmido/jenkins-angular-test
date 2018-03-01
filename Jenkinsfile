@@ -32,7 +32,7 @@ node {
 
     stage('Test') {
         withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
-          sh 'ng test --progress=false --watch false'
+          sh 'ng test --single-run --code-coverage'
         }
         junit '**/test-results.xml'
     }
