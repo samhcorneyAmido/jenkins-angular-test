@@ -29,7 +29,9 @@ node {
     }
 
     stage('Test') {
+      withEnv(["CHROME_BIN=/usr/bin/chromium-browser"]) {
         sh 'npm run test --single-run --no-progress --browser=ChromeNoSandbox'
+      }
     }
 
     stage('Lint') {
