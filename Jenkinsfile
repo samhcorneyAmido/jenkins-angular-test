@@ -25,13 +25,11 @@ node {
     }
 
     stage('NPM Install') {
-      sh 'npm install'
+        sh 'npm install'
     }
 
     stage('Test') {
-      withEnv(["CHROME_BIN=/usr/bin/chromium"]) {
         sh 'npm run test -- --single-run --no-progress --browser=ChromeHeadlessNoSandbox'
-      }
     }
 
     stage('Lint') {
