@@ -1,9 +1,9 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('Test') {
+        stage('NPM Install') {
             steps {
-                sh 'node --version'
+                sh 'npm install'
             }
         }
     }
