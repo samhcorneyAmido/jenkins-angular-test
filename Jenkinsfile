@@ -18,7 +18,6 @@ pipeline {
         }
         stage('Build') {
           steps {
-            milestone()
             sh 'npm run build --prod --aot --sm --progress=false'
           }
         }
@@ -31,7 +30,6 @@ pipeline {
 
         stage('Deploy') {
           steps {
-            milestone()
             echo "Deploying..."
           }
         }
