@@ -1,6 +1,6 @@
 pipeline {
   agent {
-      docker { image 'wesleyluk90/node-with-chrome' }
+      docker { image 'samhcorneyamido/node-with-chrome' }
   }
     stages {
         stage('Install') {
