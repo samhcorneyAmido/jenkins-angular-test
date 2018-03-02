@@ -8,11 +8,6 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Node Version') {
-            steps {
-                sh 'node -v'
-            }
-        }
         stage('Test') {
             steps {
                 sh 'npm run test -- --single-run --no-progress --browser=ChromeHeadlessNoSandbox'
