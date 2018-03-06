@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm run test -- --single-run --no-progress --browser=ChromeHeadlessNoSandbox'
+                sh 'npm run test -- --single-run --no-progress --browser=ChromeHeadlessNoSandbox --codeCoverage'
             }
         }
         stage('Lint') {
