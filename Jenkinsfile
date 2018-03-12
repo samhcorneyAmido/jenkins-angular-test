@@ -13,6 +13,11 @@ pipeline {
                 sh 'npm run test -- --single-run --no-progress --browser=ChromeHeadlessNoSandbox'
             }
         }
+        stage('E2E') {
+            steps {
+                sh 'npm run e2e'
+            }
+        }
         stage('Lint') {
           steps {
               sh 'npm run lint'
