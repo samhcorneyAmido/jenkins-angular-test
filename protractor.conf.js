@@ -7,16 +7,7 @@ exports.config = {
   allScriptsTimeout: 11000,
   specs: ["./e2e/**/*.e2e-spec.ts"],
   capabilities: {
-    browserName: "chrome",
-    chromeOptions: {
-      args: [
-        "--no-sandbox",
-        "--test-type=browser",
-        "--disable-gpu",
-        "--window-size=1280,1024",
-        "--headless"
-      ]
-    }
+    browserName: "chrome"
   },
   directConnect: true,
   baseUrl: "http://localhost:4200/",

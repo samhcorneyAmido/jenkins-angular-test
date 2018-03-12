@@ -15,7 +15,7 @@ pipeline {
         }
         stage('E2E') {
             steps {
-                sh 'npm run e2e'
+                sh 'npm run e2e -- --config=protractor-ci.conf.js'
             }
         }
         stage('Lint') {
