@@ -9,7 +9,13 @@ exports.config = {
   capabilities: {
     browserName: "chrome",
     chromeOptions: {
-      args: ["--headless", "--window-size=800,600"]
+      args: [
+        "--no-sandbox",
+        "--test-type=browser",
+        "--disable-gpu",
+        "--window-size=1280,1024",
+        "--headless"
+      ]
     }
   },
   directConnect: true,
