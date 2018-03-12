@@ -3,6 +3,11 @@ pipeline {
       docker { image 'samhcorneyamido/node-with-chrome' }
   }
     stages {
+        stage('Node version') {
+            steps {
+                sh 'nvm use'
+            }
+        }
         stage('Install') {
             steps {
                 sh 'npm install'
